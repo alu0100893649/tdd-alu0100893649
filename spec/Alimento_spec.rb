@@ -8,6 +8,9 @@ RSpec.describe Alimento do
     it "Tiene un nombre" do
       expect(Alimento.new("manzana", 10, 10, 10).nombre).to eq("manzana")
     end
+    it "Tiene un atributo glucidos" do
+      expect(Alimento.new("manzana", 10, 10, 10).glucidos).to eq(10)
+    end
   end
   
 end
