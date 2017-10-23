@@ -14,6 +14,9 @@ RSpec.describe Alimento do
     it "Tiene un atributo proteinas" do
       expect(Alimento.new("manzana", 10, 10, 10).proteinas).to eq(10)
     end
+    it "Tiene un atributo lipidos" do
+      expect(Alimento.new("manzana", 10, 10, 10).lipidos).to eq(10)
+    end
   end
   
 end
