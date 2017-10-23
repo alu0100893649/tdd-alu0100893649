@@ -6,5 +6,4 @@ class Alimento
     def initialize(nombre, glucidos, lipidos, proteinas)
         @nombre = nombre
     end
-
 end
