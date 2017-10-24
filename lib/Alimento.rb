@@ -10,5 +10,8 @@ class Alimento
         @lipidos = lipidos
     end
     
-    
+    def to_s
+        x = "#{nombre}: #{proteinas}g proteínas, #{glucidos}g glúcidos, #{lipidos}g lípidos"
+        return x
+    end
 end
