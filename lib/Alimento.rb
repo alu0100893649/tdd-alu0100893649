@@ -9,4 +9,6 @@ class Alimento
         @proteinas = proteinas
         @lipidos = lipidos
     end
+    
+    
 end

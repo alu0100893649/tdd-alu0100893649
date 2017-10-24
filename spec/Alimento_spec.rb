@@ -22,4 +22,10 @@ RSpec.describe Alimento do
     end
   end
   
+  context "Formateo del alimento" do
+    it "Tiene un método para obtener el alimento formateado" do
+      expect(Alimento.new("manzana", 10, 10, 10).to_s).to eq("manzana: 10g proteínas, 10g glúcidos, 10g lípidos")
+    end
+  end
+  
 end
