@@ -14,4 +14,8 @@ class Alimento
         x = "#{nombre}: #{proteinas}g proteínas, #{glucidos}g glúcidos, #{lipidos}g lípidos"
         return x
     end
+    
+    def kcal
+        
+    end
 end
