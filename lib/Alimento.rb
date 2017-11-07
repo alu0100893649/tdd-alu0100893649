@@ -1,2 +1,2 @@
-require "Alimento/version"
-require "Alimento/Alimento"
+require "alimento/version"
+require "alimento/Alimento"
