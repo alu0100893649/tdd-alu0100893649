@@ -19,6 +19,15 @@ RSpec.describe Lista do
     it "tiene cabeza y cola" do
         expect(@list1).to have_attributes(:head => nil, :tail => nil)
     end
+    
+    it "puede insertar un nodo por la cabeza" do
+        @list1.push_head(15)
+        expect(:head.value).to eq(15)
+    end
+    it "puede insertar un nodo por la cola" do
+        @list1.push_tail(15)
+        expect(:tail.value).to eq(15)
+    end
   end
   
 end
