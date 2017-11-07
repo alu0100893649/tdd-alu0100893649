@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.describe Lista do
-  before :all do
+  before :each do
     @nodo1 = Node.new(15, nil, nil)
     @list1 = Lista.new()
   end
@@ -30,8 +30,10 @@ RSpec.describe Lista do
     end
     
     it "puede insertar varios nodos" do
-        expect(@list1.head.value).to eq(15)
-        expect(@list1.head.next.value).to eq(10)
+        @list1.push([1,2,3])
+        expect(@list1.head.value).to eq(1)
+        expect(@list1.head.next.value).to eq(2)
+        expect(@list1.head.next.next.value).to eq(3)
     end
   end
   
