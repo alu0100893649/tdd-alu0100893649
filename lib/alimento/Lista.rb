@@ -32,4 +32,20 @@ class Lista
             |i| push_tail(i)
         }
     end
+    
+    def pop_head()
+        if(@head == nil)
+            return nil
+        end
+        
+        x = @head
+        @head = @head.next
+        if(@head == nil)
+            @tail = nil
+        else
+            @head.prev = nil
+            x.next = nil
+        end
+        x.value
+    end
 end
