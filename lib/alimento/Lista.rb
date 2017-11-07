@@ -26,4 +26,10 @@ class Lista
             @tail = nuevo
         end
     end
+    
+    def push(x)
+        x.each{
+            |i| push_tail(i)
+        }
+    end
 end
