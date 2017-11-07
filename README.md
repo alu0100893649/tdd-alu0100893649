@@ -19,11 +19,16 @@ O realiza una instalación directa con:
 
     $ gem install Alimento
 
-## Uso
+## Detalles de las clases
 
-- Creacion de Alimento: Alimento.new(<Nombre del alimento>, <gramos de glúcidos>, <gramos de proteínas>, <gramos de lípidos>)
+### Alimento
+- Creacion de Alimento: Alimento.new(<Nombre del alimento>, <gramos de glúcidos>, <gramos de proteínas>, <gramos de lípidos>).
 - Tiene métodos para el acceso de lectura a los atributos _nombre_, _glucidos_, _proteinas_ y _lipidos_.
-- kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías
+- kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías.
+
+### Grupo Alimenticio
+
+### Lista
 
 ## Licencia
 
