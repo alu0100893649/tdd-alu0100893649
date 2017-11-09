@@ -28,7 +28,15 @@ O realiza una instalación directa con:
 
 ### AlimentoCategorizable
 
+### Node
+- Creacion de Node: Node.new(<valor>, <nodo siguiente>, <nodo previo>).
+- Tiene métodos de acceso y modificación de los atributos _value_, _next_ y _prev_.
+
 ### Lista
+- Creacion de Lista: Lista.new()
+- Tiene métodos de acceso para sus atributos _head_ y _tail_, lo que permite hacer comprobación del contenido previa sustracción o inserción.
+- Tiene métodos para la extracción (*pop_head*, *pop_tail*) para eliminar un nodo de la lista y obtener su contenido (su valor Node.value).
+- Tiene métodos para la inserción de elementos (*push_head(x)*, *push_tail*) para la inclusión de un nodo en la lista.
 
 ### GrupoAlimenticio
 
