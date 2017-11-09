@@ -53,5 +53,10 @@ RSpec.describe GrupoAlimenticio do
         expect(@list1.head.value).to have_attributes(:nombre => "Pera", :categoria => "Fruta", :glucidos => 5, :proteinas => 5, :lipidos => 5)
         expect(@list1.head.next.value).to have_attributes(:nombre => "Manzana", :categoria => "Fruta", :glucidos => 10, :proteinas => 10, :lipidos => 10)
     end
+    
+    it "Puede extraerse un alimento" do
+        @list1.push_alimentos([@nodo, @nodo2])
+        expect(@list1.pop_alimento).to have_attributes(:nombre => "Manzana", :categoria => "Fruta", :glucidos => 10, :proteinas => 10, :lipidos => 10)
+    end
   end
 end
