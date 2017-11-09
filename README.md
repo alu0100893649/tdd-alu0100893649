@@ -26,9 +26,11 @@ O realiza una instalación directa con:
 - Tiene métodos para el acceso de lectura a los atributos _nombre_, _glucidos_, _proteinas_ y _lipidos_.
 - kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías.
 
-### Grupo Alimenticio
+### AlimentoCategorizable
 
 ### Lista
+
+### GrupoAlimenticio
 
 ## Licencia
 
