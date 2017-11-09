@@ -44,7 +44,7 @@ RSpec.describe GrupoAlimenticio do
     
     it "Puede insertar un nodo de alimento" do
         @list1.push_alimento(@nodo)
-        expect(@list1.head.value).to eq(@nodo)
+        expect(@list1.head.value).to have_attributes(:nombre => "Manzana", :categoria => "Fruta", :glucidos => 10, :proteinas => 10, :lipidos => 10)
     end
   end
 end
