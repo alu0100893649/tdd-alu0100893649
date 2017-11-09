@@ -42,6 +42,9 @@ O realiza una instalación directa con:
 - Tiene métodos para la inserción de elementos (*push_head(x)*, *push_tail*) para la inclusión de un nodo en la lista.
 
 ### GrupoAlimenticio
+- Creacion de GrupoAlimenticio: GrupoAlimenticio.new(<CATEGORIA>).
+- Hereda su funcionalidad de la lista
+- Tiene un atributo _categoria_ que define la categoria de los alimentos que se meten en la lista, y su método de lectura
 
 ## Licencia
 
