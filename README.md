@@ -22,11 +22,14 @@ O realiza una instalación directa con:
 ## Detalles de las clases
 
 ### Alimento
-- Creacion de Alimento: Alimento.new(<Nombre del alimento>, <gramos de glúcidos>, <gramos de proteínas>, <gramos de lípidos>).
+- Creacion de Alimento: Alimento.new(<Nombre>, <gr glúcidos>, <gr proteínas>, <gr lípidos>).
 - Tiene métodos para el acceso de lectura a los atributos _nombre_, _glucidos_, _proteinas_ y _lipidos_.
 - kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías.
 
 ### AlimentoCategorizable
+- Creacion de AlimentoCategorizable: AlimentoCategorizable.new(<Nombre>, <categoria>, <gr glúcidos>, <gr proteínas>, <gr lípidos>)
+- Hereda la funcionalidad de Alimento
+- Tiene un atributo _categoria_, su grupo alimenticio, y métodos para su acceso de lectura
 
 ### Node
 - Creacion de Node: Node.new(<valor>, <nodo siguiente>, <nodo previo>).
