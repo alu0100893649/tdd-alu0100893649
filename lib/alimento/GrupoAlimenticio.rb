@@ -11,4 +11,14 @@ class GrupoAlimenticio < Lista
             push_head(AlimentoCategorizable.new(x.nombre, @categoria, x.glucidos, x.proteinas, x.lipidos))
         end
     end
+    
+    def push_alimentos(x)
+        x.each do |alimento|
+            if(alimento.is_a?(AlimentoCategorizable))
+                push_head(AlimentoCategorizable.new(alimento.nombre, @categoria, alimento.glucidos, alimento.proteinas, alimento.lipidos))
+            end
+        end
+    end
+    
+    
 end
