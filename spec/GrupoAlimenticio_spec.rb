@@ -2,7 +2,8 @@ require "spec_helper"
 
 RSpec.describe GrupoAlimenticio do
   before :each do
-      @list1 = GrupoAlimenticio.new("HLH")
+      @list1 = GrupoAlimenticio.new("Fruta")
+      @nodo = AlimentoCategorizable.new("Manzana", "Helados", 10, 10, 10)
   end
   
   it "has a version number" do
@@ -39,6 +40,11 @@ RSpec.describe GrupoAlimenticio do
         expect(@list1.pop_tail).to be_nil
         @list1.push_head(10)
         expect(@list1.pop_tail).to eq(10)
+    end
+    
+    it "Puede insertar un nodo de alimento" do
+        @list1.push_alimento(@nodo)
+        expect(@list1.head.value).to eq(@nodo)
     end
   end
 end

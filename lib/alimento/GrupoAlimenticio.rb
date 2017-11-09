@@ -5,4 +5,5 @@ class GrupoAlimenticio < Lista
         super()
         @categoria = categoria
     end
+
 end
