@@ -2,6 +2,7 @@ require "spec_helper"
 
 RSpec.describe GrupoAlimenticio do
   before :all do
+      @list1 = GrupoAlimenticio.new("HLH")
   end
   
   it "has a version number" do
