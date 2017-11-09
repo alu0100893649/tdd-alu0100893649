@@ -1,0 +1,2 @@
+class GrupoAlimenticio < Lista
+end
