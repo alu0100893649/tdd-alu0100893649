@@ -20,5 +20,7 @@ class GrupoAlimenticio < Lista
         end
     end
     
-    
+    def pop_alimento()
+        pop_head()
+    end
 end
