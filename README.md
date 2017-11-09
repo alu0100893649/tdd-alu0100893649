@@ -22,17 +22,17 @@ O realiza una instalación directa con:
 ## Detalles de las clases
 
 ### Alimento
-- Creacion de Alimento: Alimento.new(<Nombre>, <gr glúcidos>, <gr proteínas>, <gr lípidos>).
+- Creacion de Alimento: Alimento.new(Nombre, gr glúcidos, gr proteínas, gr lípidos).
 - Tiene métodos para el acceso de lectura a los atributos _nombre_, _glucidos_, _proteinas_ y _lipidos_.
 - kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías.
 
 ### AlimentoCategorizable
-- Creacion de AlimentoCategorizable: AlimentoCategorizable.new(<Nombre>, <categoria>, <gr glúcidos>, <gr proteínas>, <gr lípidos>)
+- Creacion de AlimentoCategorizable: AlimentoCategorizable.new(Nombre, categoria, gr glúcidos, gr proteínas, gr lípidos)
 - Hereda la funcionalidad de Alimento
 - Tiene un atributo _categoria_, su grupo alimenticio, y métodos para su acceso de lectura
 
 ### Node
-- Creacion de Node: Node.new(<valor>, <nodo siguiente>, <nodo previo>).
+- Creacion de Node: Node.new(valor, nodo siguiente, nodo previo).
 - Tiene métodos de acceso y modificación de los atributos _value_, _next_ y _prev_.
 
 ### Lista
@@ -42,7 +42,7 @@ O realiza una instalación directa con:
 - Tiene métodos para la inserción de elementos (*push_head(x)*, *push_tail*) para la inclusión de un nodo en la lista.
 
 ### GrupoAlimenticio
-- Creacion de GrupoAlimenticio: GrupoAlimenticio.new(<CATEGORIA>).
+- Creacion de GrupoAlimenticio: GrupoAlimenticio.new(Categoria).
 - Hereda su funcionalidad de la lista
 - Tiene un atributo _categoria_ que define la categoria de los alimentos que se meten en la lista, y su método de lectura
 
