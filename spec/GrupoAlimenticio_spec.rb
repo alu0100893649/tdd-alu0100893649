@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.describe GrupoAlimenticio do
-  before :all do
+  before :each do
       @list1 = GrupoAlimenticio.new("HLH")
   end
   
