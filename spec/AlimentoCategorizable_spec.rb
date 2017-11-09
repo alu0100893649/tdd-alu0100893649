@@ -39,4 +39,16 @@ RSpec.describe AlimentoCategorizable do
       expect(@pera.kcal).to eq(2*4 + 1*4 + 3*9)
     end
   end
+  
+  context "Jerarquía de AlimentoCategorizable" do
+    it "Esta definido como un objeto de clase AlimentoCategorizable" do
+      expect(@manzana).to be_instance_of(AlimentoCategorizable)
+    end
+    it "Hereda de la clase Alimento" do
+      expect(@manzana).to be_kind_of(Alimento)
+    end
+    it "Pertenece a una jerarquía" do
+      expect(@manzana).to be_kind_of(Object)
+    end
+  end
 end
