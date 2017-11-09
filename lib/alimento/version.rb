@@ -7,5 +7,9 @@ class AlimentoCategorizable < Alimento
 end
 
 class Lista
+  VERSION = "1.0.0"
+end
+
+class GrupoAlimenticio < Lista
   VERSION = "0.1.0"
 end

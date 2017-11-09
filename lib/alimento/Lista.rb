@@ -1,7 +1,7 @@
 Node = Struct.new(:value, :next, :prev)
 
 class Lista
-    attr_accessor :head, :tail
+    attr_reader :head, :tail
     
     def push_head(x)
         if(@head == nil)
