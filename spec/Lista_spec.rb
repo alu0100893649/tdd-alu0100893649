@@ -23,7 +23,7 @@ RSpec.describe Lista do
     it "Es enumerable" do
       @list1.push_head(15)
       @list1.push_head(10)
-      x = [15, 10]
+      x = [10, 15]
       i = 0
       @list1.each do |node|
         expect(node.value).to eq(x[i])
