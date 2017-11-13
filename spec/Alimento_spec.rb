@@ -16,6 +16,10 @@ RSpec.describe Alimento do
     end
     it "Es comparable" do
       expect(@manzana > @pera).to be(true)
+      expect(@pera < @manzana).to be(true)
+      expect(@manzana >= @pera).to be(true)
+      expect(@pera <= @manzana).to be(true)
+      expect(@manzana == @manzana).to be(true)
     end
     it "Tiene un método para obtener el nombre" do
       expect(@manzana.nombre).to eq("manzana")
