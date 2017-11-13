@@ -9,6 +9,7 @@ RSpec.describe Alimento do
   it "has a version number" do
     expect(Alimento::VERSION).not_to be nil
   end
+  
   context "Elementos básicos del alimento" do
     it "Tiene los atributos nombre, proteinas, glucidos y lipidos" do
       expect(@manzana).to have_attributes(:nombre => "manzana", :proteinas => 10, :glucidos => 10, :lipidos => 10)
