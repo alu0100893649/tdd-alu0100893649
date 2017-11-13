@@ -1,4 +1,5 @@
 class Alimento
+    
     attr_reader :nombre, :glucidos, :proteinas, :lipidos
     
     def initialize(nombre, glucidos, proteinas, lipidos)

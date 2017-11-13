@@ -13,6 +13,9 @@ RSpec.describe Alimento do
     it "Tiene los atributos nombre, proteinas, glucidos y lipidos" do
       expect(@manzana).to have_attributes(:nombre => "manzana", :proteinas => 10, :glucidos => 10, :lipidos => 10)
     end
+    it "Es comparable" do
+      expect(@manzana > @pera).to be(true)
+    end
     it "Tiene un método para obtener el nombre" do
       expect(@manzana.nombre).to eq("manzana")
     end
@@ -37,5 +40,4 @@ RSpec.describe Alimento do
       expect(@pera.kcal).to eq(2*4 + 1*4 + 3*9)
     end
   end
-  
 end
