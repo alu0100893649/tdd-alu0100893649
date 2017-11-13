@@ -20,6 +20,17 @@ RSpec.describe Lista do
         expect(@list1).to have_attributes(:head => nil, :tail => nil)
     end
     
+    it "Es enumerable" do
+      @list1.push_head(15)
+      @list1.push_head(10)
+      x = [15, 10]
+      i = 0
+      @list1.each do |node|
+        expect(node.value).to eq(x[i])
+        i += 1
+      end
+    end
+    
     it "puede insertar un nodo por la cabeza" do
         @list1.push_head(15)
         expect(@list1.head.value).to eq(15)
