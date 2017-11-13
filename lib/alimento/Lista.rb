@@ -1,6 +1,7 @@
 Node = Struct.new(:value, :next, :prev)
 
 class Lista
+    include Enumerable
     attr_reader :head, :tail
     
     def push_head(x)
@@ -63,5 +64,13 @@ class Lista
             x.prev = nil
         end
         x.value
+    end
+    
+    def each
+        x = @head
+        while(x != nil)
+            yield x
+            x = x.next
+        end
     end
 end
