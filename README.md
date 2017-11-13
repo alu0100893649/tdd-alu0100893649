@@ -25,6 +25,7 @@ O realiza una instalación directa con:
 - Creacion de Alimento: Alimento.new(Nombre, gr glúcidos, gr proteínas, gr lípidos).
 - Tiene métodos para el acceso de lectura a los atributos _nombre_, _glucidos_, _proteinas_ y _lipidos_.
 - kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías.
+- Es comparable
 
 ### AlimentoCategorizable
 - Creacion de AlimentoCategorizable: AlimentoCategorizable.new(Nombre, categoria, gr glúcidos, gr proteínas, gr lípidos)
@@ -40,6 +41,7 @@ O realiza una instalación directa con:
 - Tiene métodos de acceso para sus atributos _head_ y _tail_, lo que permite hacer comprobación del contenido previa sustracción o inserción.
 - Tiene métodos para la extracción (*pop_head*, *pop_tail*) para eliminar un nodo de la lista y obtener su contenido (su valor Node.value).
 - Tiene métodos para la inserción de elementos (*push_head(x)*, *push_tail*) para la inclusión de un nodo en la lista.
+- Es enumerable
 
 ### GrupoAlimenticio
 - Creacion de GrupoAlimenticio: GrupoAlimenticio.new(Categoria).
