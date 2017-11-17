@@ -103,7 +103,7 @@ class Lista
     def each
         x = @head
         while(x != nil)
-            yield x
+            yield x.value
             x = x.next
         end
     end

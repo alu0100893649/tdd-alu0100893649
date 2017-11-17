@@ -26,7 +26,7 @@ RSpec.describe Lista do
       x = [10, 15]
       i = 0
       @list1.each do |node|
-        expect(node.value).to eq(x[i])
+        expect(node).to eq(x[i])
         i += 1
       end
     end
