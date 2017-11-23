@@ -25,6 +25,7 @@ O realiza una instalación directa con:
 - Creacion de Alimento: Alimento.new(Nombre, gr glúcidos, gr proteínas, gr lípidos).
 - Tiene métodos para el acceso de lectura a los atributos _nombre_, _glucidos_, _proteinas_ y _lipidos_.
 - kcal: método para el cálculo. Devuelve el valor energético del alimento en kilocalorías.
+- Puede calcular el índice glucémico de un alimento a partir de los datos del experimento
 - Es comparable
 
 ### AlimentoCategorizable
