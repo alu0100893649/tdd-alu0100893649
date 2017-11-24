@@ -25,33 +25,15 @@ class Alimento
     end
     
     def calculate_index(alimento, glucosa)
-		aibc = []
-		aibcgl = []
-		acum = 0
+		acum = alimento.map{|data| data.map.with_index(1){|x, a| if(a >= data.length) then 0 else (((data[a] - data[0]) + (data[a - 1] - data[0])) /2)*5 end } }
+		aibc = acum.map{ |x| x.reduce{|i, a| i + a } }
 		
-		alimento.each do |x|
-			x.each_index do |a| 
-				if (a  != 0) 
-					acum += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5  
-				end 
-			end 
-			aibc << acum
-			acum = 0
-		end
+		acum = []
 		
-		glucosa.each do |x|
-			acum = 0
-			x.each_index do |a| 
-				if (a  != 0) 
-					acum += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5
-				end 
-			end 
-			aibcgl << acum
-			acum = 0
-		end
+		acum = glucosa.map{|data| data.map.with_index(1){|x, a| if(a >= data.length) then 0 else (((data[a] - data[0]) + (data[a - 1] - data[0])) /2)*5 end } }
+		aibcgl = acum.map{ |x| x.reduce{|i, a| i + a } }
 
-		igind = []
-		igind = aibc.map.with_index { |a, x| a = ((aibc[x] / aibcgl[x]) * 100) }
+		igind = aibc.map.with_index { |a, x| ((aibc[x] / aibcgl[x]) * 100) }
 	    
 	    igind.reduce(:+) / igind.length
     end
