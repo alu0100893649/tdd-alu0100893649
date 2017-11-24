@@ -4,6 +4,13 @@ RSpec.describe Alimento do
   before :all do
     @manzana = Alimento.new("manzana", 10, 10, 10)
     @pera = Alimento.new("pera", 1, 2, 3)
+    
+    @compota = Alimento.new("Compota", 4, 5, 6)
+    @grcompota = [[6.7, 6.5, 6.8, 6.9, 7.0, 7.1, 6.9, 6.9, 6.9, 6.7, 6.9, 7.3, 7.0, 7.0, 7.2, 7.1, 6.8, 7.2 ,7.3 ,7.0 ,6.8 ,6.7, 6.8, 6.7, 6.9],
+  	                [4.6 ,4.8 ,5.3, 5.6, 6.1, 6.5, 6.6, 7.0, 7.0, 6.8, 6.4, 6.3, 6.1, 6.1, 6.2, 6.0, 6.1, 6.1 ,6.2, 6.3, 6.4 ,6.1 ,6.1 ,5.7 ,5.9]]
+    @glcompota = [[4.9 ,5.3 ,5.9 ,6.7 ,7.2 ,7.6 ,8.0 ,8.2, 8.2 ,8.4 ,8.3 ,8.3 ,8.0 ,7.5, 7.1, 6.8 ,6.8 ,6.9, 6.8, 6.3 ,6.2 ,6.3 ,6.2 ,6.3, 6.1],
+                    [6.3, 5.4, 5.6, 5.7, 6.5, 7.4, 7.9, 7.4, 7.7, 7.9, 7.9, 7.8, 7.8, 7.8, 8.0, 8.5, 9.4 ,10.8 ,10.5, 9.1, 8.9, 8.3, 7.7, 7.6 ,7.5]]
+    IGCOMPOTA = 54.499780077077745
   end
   
   it "has a version number" do
@@ -33,6 +40,12 @@ RSpec.describe Alimento do
     it "Tiene un método para obtener el lipidos" do
       expect(@manzana.lipidos).to eq(10)
     end
+  end
+  context "Índice de Glucosa del alimento" do
+  	it "Cálcula el índice de glucosa mendiante programación funcional" do
+  	  @compota.calculate_index(@rcompota, @glcompota)
+  	  expect(@compota.indexglucosa).to eq(IGCOMPOTA)
+  	end
   end
   context "Formateo del alimento" do
     it "Tiene un método para obtener el alimento formateado" do

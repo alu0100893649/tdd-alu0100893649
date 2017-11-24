@@ -8,7 +8,7 @@
 # @attr_reader Number lipidos lipidos contenidos en el alimento
 class Alimento
     include Comparable
-    attr_reader :nombre, :glucidos, :proteinas, :lipidos, :indexGlucose
+    attr_reader :nombre, :glucidos, :proteinas, :lipidos
     
     # Constructor de Alimento
     # @param [String] nombre nombre del alimento
@@ -22,7 +22,10 @@ class Alimento
         @glucidos = glucidos
         @proteinas = proteinas
         @lipidos = lipidos
-        @indexGlucose = nil
+    end
+    
+    def calculate_index(alimento, glucosa)
+		
     end
     
     # Convierte el objeto en un String
