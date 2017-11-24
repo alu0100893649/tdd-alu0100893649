@@ -52,3 +52,7 @@ O realiza una instalación directa con:
 ## Licencia
 
 La gema está disponible como código abierto bajo los términos de la [Licencia MIT](http://opensource.org/licenses/MIT).
+
+## Sincronización con Travis CI
+
+Está sincronizado con Travis
