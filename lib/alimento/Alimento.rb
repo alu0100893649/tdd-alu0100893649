@@ -29,7 +29,6 @@ class Alimento
     # @param [Array<Float>] glucosa vector con los datos de glucosa tras la ingesta de 50gr de glucosa por cada individuo en el experimento
     #
     # @return [Float] Devuelve el índice glucémico dado el experimento
-    
     def calculate_index(alimento, glucosa)
 		acum = alimento.map{|data| data.map.with_index(1){|x, a| if(a >= data.length) then 0 else (((data[a] - data[0]) + (data[a - 1] - data[0])) /2)*5 end } }
 		aibc = acum.map{ |x| x.reduce{|i, a| i + a } }
