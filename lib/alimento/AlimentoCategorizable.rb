@@ -27,7 +27,7 @@ class AlimentoCategorizable < Alimento
     # Convierte el objeto en un String
     # @return [String] descripción del alimento en una cadena de caracteres
     def to_s
-        x = "#{nombre} (#{categoria}) : #{proteinas}g proteínas, #{glucidos}g glúcidos, #{lipidos}g lípidos"
+        x = "%-10s %-10s %-10d %-10d %-10d" % [nombre, categoria, proteinas, glucidos,  lipidos]
         return x
     end
 end
