@@ -56,3 +56,5 @@ La gema está disponible como código abierto bajo los términos de la [Licencia
 ## Sincronización con Travis CI
 
 Está sincronizado con Travis
+
+## Implementación de Benchmark para comprobación de eficiencia de for, each y sort
