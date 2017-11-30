@@ -1,7 +1,8 @@
-require "bundler/setup"
-require "coveralls"
-require "Alimento"
+require 'coveralls'
 Coveralls.wear!
+
+require "bundler/setup"
+require "Alimento"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
