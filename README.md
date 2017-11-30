@@ -58,3 +58,8 @@ La gema está disponible como código abierto bajo los términos de la [Licencia
 Está sincronizado con Travis
 
 ## Implementación de Benchmark para comprobación de eficiencia de for, each y sort
+
+## Badges
+
+[![Coverage Status](https://coveralls.io/repos/github/alu0100893649/tdd-alu0100893649/badge.svg?branch=master)](https://coveralls.io/github/alu0100893649/tdd-alu0100893649?branch=master)
+[![Build Status](https://travis-ci.com/alu0100893649/tdd-alu0100893649.svg?token=tqHgDYDqVqUip5WLvPy6&branch=master)](https://travis-ci.com/alu0100893649/tdd-alu0100893649)
