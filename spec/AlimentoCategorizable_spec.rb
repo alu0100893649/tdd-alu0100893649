@@ -31,7 +31,7 @@ RSpec.describe AlimentoCategorizable do
   
   context "Formateo del alimento" do
     it "Tiene un método para obtener el alimento formateado" do
-      expect(@manzana.to_s).to eq("manzana (Fruta) : 10g proteínas, 10g glúcidos, 10g lípidos")
+      expect(@manzana.to_s).to eq("%-10s %-10s %-10.2f %-10.2f %-10.2f" % [@manzana.nombre, @manzana.categoria, @manzana.proteinas, @manzana.glucidos,  @manzana.lipidos])
     end
   end
   context "Valor energético" do

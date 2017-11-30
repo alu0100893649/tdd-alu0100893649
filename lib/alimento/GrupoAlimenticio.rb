@@ -6,6 +6,7 @@
 # @attr_reader String categoria categoria del grupo alimenticio representado
 # @attr_reader Node head Nodo en la cabeza de la lista
 # @attr_reader Node tail Nodo en la última posición de la lista
+
 class GrupoAlimenticio < Lista
     attr_reader :categoria
     
@@ -45,5 +46,18 @@ class GrupoAlimenticio < Lista
     # @return [any, nil] devuelve el valor guardado en el primer nodo o nil si no hay nodos en el GrupoAlimenticio
     def pop_alimento()
         pop_head()
+    end
+    
+    # Convierte el objeto en un String
+    # @return [String] tabla de alimentos que conforman el grupo
+    def to_s
+        x = categoria + "\n"
+        titles = "#{" " * 21}%-10s %-10s %-10s\n" % ["proteínas", "glúcidos", "lípidos"]
+        x += titles
+        each do |alimento|
+            x += Alimento.instance_method(:to_s).bind(alimento).call + "\n"
+        end
+        x += "\n"
+        return x
     end
 end
