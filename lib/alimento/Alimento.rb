@@ -46,7 +46,7 @@ class Alimento
     # Convierte el objeto en un String
     # @return [String] descripción del alimento en una cadena de caracteres
     def to_s
-        x = "%-20s %-10d %-10d %-10d" % [nombre, proteinas, glucidos,  lipidos]
+        x = "%-20s %-10.2f %-10.2f %-10.2f" % [nombre, proteinas, glucidos,  lipidos]
         return x
     end
     

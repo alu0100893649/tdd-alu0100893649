@@ -67,6 +67,7 @@ class GrupoAlimenticio < Lista
         each do |alimento|
             x += Alimento.instance_method(:to_s).bind(alimento).call + "\n"
         end
+        x += "\n"
         return x
     end
 end

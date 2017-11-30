@@ -1,9 +1,12 @@
 require "spec_helper"
+require "benchmark"
 
 RSpec.describe "Benchmark" do
     before :all do
         HLC, CYD, PYM, GRA = "Huevos, lácteos y helados", "Carnes y derivados", "Pescados y mariscos", "Alimentos grasos"
         CRB, VYH, FRU = "Alimentos ricos en carbohidratos", "Verduras y hortalizas", "Fruta"
+    end
+    before :each do
         
         huevo = AlimentoCategorizable.new("Huevo frito", HLC, 14.1, 0.0, 19.5)
         leche = AlimentoCategorizable.new("Leche vaca", HLC, 3.3, 4.8, 3.2)
@@ -54,14 +57,58 @@ RSpec.describe "Benchmark" do
             def to_s
                 string = ""
                 each do |x|
-                    string += x + "\n\n"
+                    string += x
                 end
                 return string
             end
         end
+        
+        @alimentos = [ huevo, leche, yogurt, cerdo, ternera, pollo, bacalao, atun, salmon, 
+                        aceite, mantequilla, chocolate, azucar, arroz, lentejas, papas, 
+                        tomate, cebolla, calabaza, manzana, platano, pera ]
+        
+        def for_ordenation(inicial)
+            array = inicial
+            for i in 0..array.size 
+                for j in (i + 1)..array.size-1    
+                    if(array[i] > array[j]) then array[i], array[j] = array[j], array[i] end 
+                end
+            end
+            array
+        end
+        
+        def each_ordenation(inicial)
+            array = inicial
+            array.each do
+                swap = false
+                array.each_with_index do |a, i|
+                break if i == (array.length - 1)
+                if a > array[i + 1]
+                    array[i],array[i + 1] = array[i + 1], array[i]
+                    swap = true
+                end
+              end
+              break if swap == false #No se realizan cambios en el vector. Está ordenado
+            end
+            array
+        end
+      
     end
     
-    it "does something" do
-        expect(true).to be(false)
+    context "#Printing" do
+        it " " do
+            puts "\n"
+            puts @grupos
+        end
+    end
+    
+    context "#Benchmark timing" do
+        it " " do
+            Benchmark.bmbm(10) do |x| #funcionamiento de benchmark
+                x.report("#sort:")  { @alimentos.dup.sort }
+                x.report("#for:") { for_ordenation(@alimentos.dup)}
+                x.report("#each:") { each_ordenation(@alimentos.dup)}
+            end
+        end
     end
 end
