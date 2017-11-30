@@ -1,13 +1,3 @@
-#require "./Lista"
-#require "./Alimento"
-#require "./AlimentoCategorizable"
-#grupo = GrupoAlimenticio.new("Fruta")
-#manzana = AlimentoCategorizable.new("Manzana", "Fruta", 5, 5, 5)
-#pera = AlimentoCategorizable.new("Pera", "Fruta", 6, 6, 6)
-#platano = AlimentoCategorizable.new("Plátano", "Fruta", 7, 7, 7)
-#grupo.push_alimentos([manzana, pera, platano])
-#puts grupo
-
 # Representación de un grupo alimenticio con categoría
 # Hereda de Lista
 #
