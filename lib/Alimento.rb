@@ -3,6 +3,7 @@ require "alimento/Alimento"
 require "alimento/Lista"
 require "alimento/AlimentoCategorizable"
 require "alimento/GrupoAlimenticio"
+require "alimento/PlatoHarvard"
 
 # Espacio de nombre que contiene las clases y metodos para el manejo de listas, nodos, alimentos y grupos de alimentos
 # @since 1.0.0

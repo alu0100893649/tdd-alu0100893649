@@ -7,7 +7,6 @@ RSpec.describe "Benchmark" do
         CRB, VYH, FRU = "Alimentos ricos en carbohidratos", "Verduras y hortalizas", "Fruta"
     end
     before :each do
-        
         huevo = AlimentoCategorizable.new("Huevo frito", HLC, 14.1, 0.0, 19.5)
         leche = AlimentoCategorizable.new("Leche vaca", HLC, 3.3, 4.8, 3.2)
         yogurt = AlimentoCategorizable.new("Yogurt", HLC, 3.8, 4.9, 3.8)
