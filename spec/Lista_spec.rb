@@ -56,7 +56,9 @@ RSpec.describe Lista do
     it "puede extraer el nodo de la cola" do
         expect(@list1.pop_tail).to be_nil
         @list1.push_head(10)
+        @list1.push_head(15)
         expect(@list1.pop_tail).to eq(10)
+        expect(@list1.pop_tail).to eq(15)
     end
   end
   
