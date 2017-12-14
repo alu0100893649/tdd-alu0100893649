@@ -13,5 +13,8 @@ RSpec.describe PlatoHarvard do
     it "#name" do
         expect(@plato).to have_attributes(:name => "Plato de Ejemplo");
     end
+    it "#ingredients" do
+        expect(@plato).to have_attributes(:ingredients => []);
+    end
   end
 end

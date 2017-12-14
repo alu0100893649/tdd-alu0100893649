@@ -29,12 +29,12 @@ class PlatoHarvard
         }
         
         @@medidas = [["/piezas? pequeña/",   2],
-                        ["/pieza/"          ,   4],
-                        ["/taza/"           , 0.6],
-                        ["/cuchara/"        , 0.4],
-                        ["/cuchar[o|ó]n/"   , 0.8],
-                        ["/vaso/"           , 1.2],
-                        ["/gramo/"          ,   1],
-                        ["/pizca/"          , 0.5]]
+                    ["/pieza/"          ,   4],
+                    ["/taza/"           , 0.6],
+                    ["/cuchara/"        , 0.4],
+                    ["/cuchar[o|ó]n/"   , 0.8],
+                    ["/vaso/"           , 1.2],
+                    ["/gramo[s]?/"      ,   1],
+                    ["/pizca/"          , 0.5]]
     end
 end
