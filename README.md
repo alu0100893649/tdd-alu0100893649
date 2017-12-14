@@ -49,6 +49,9 @@ O realiza una instalación directa con:
 - Hereda su funcionalidad de la lista
 - Tiene un atributo _categoria_ que define la categoria de los alimentos que se meten en la lista, y su método de lectura
 
+### Plato de Harvard
+- Implementación de un DSL para la gestión de un plato de Harvard 
+
 ## Licencia
 
 La gema está disponible como código abierto bajo los términos de la [Licencia MIT](http://opensource.org/licenses/MIT).
