@@ -69,4 +69,11 @@ class PlatoHarvard
         end
     end
     
+    alias_method :fruta, :ingredient
+    alias_method :vegetal, :ingredient
+    alias_method :cereales, :ingredient
+    alias_method :proteina, :ingredient
+    alias_method :aceite, :ingredient
+    
+    
 end

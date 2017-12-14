@@ -3,17 +3,17 @@ require "spec_helper"
 RSpec.describe PlatoHarvard do
   before :all do
       @lentejas = PlatoHarvard.new("Lentejas con arroz, salsa de tomate, huevo y pl´atano a la plancha") do
-        ingredient "tomate",
+        vegetal "tomate",
             :porciones => "2 piezas pequeñas"
-        ingredient "plátano",
+        fruta "plátano",
             :gramos => 20
-        ingredient "arroz",
+        cereales "arroz",
             :porciones => "1 taza"
         ingredient "lentejas",
             :porciones => "0.5 cucharón"
-        ingredient "huevo",
+        proteina "huevo",
             :porciones => "1 pieza"
-        ingredient "aceite de oliva",
+        aceite "aceite de oliva",
             :porciones => "0.5 cucharada"
       end
       
