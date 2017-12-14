@@ -28,16 +28,45 @@ class PlatoHarvard
         
     @@medidas = [["/piezas? pequeña/",   2],
                 ["/pieza/"          ,   4],
-                ["/taza/"           , 0.6],
+                ["/taza/"           , 1.5],
                 ["/cuchara/"        , 0.4],
                 ["/cuchar[o|ó]n/"   , 0.8],
-                ["/vaso/"           , 1.2],
-                ["/gramo[s]?/"      ,   1],
-                ["/pizca/"          , 0.5]]
+                ["/vaso/"           , 2],
+                ["/pizca/"          , 0.1]]
     
-    def initialize(name)
+    def initialize(name, &block)
         @name = name
         @ingredients = []
         @measures = []
+        
+        if block_given?
+            if block.arity == 1 then
+                yield self
+            else
+                instance_eval(&block)
+            end
+        end
     end
+    
+    def ingredient(name, amounts = {})
+        if(@@alimentos[name]) then
+            @ingredients << @@alimentos[name]
+            multiplier = 0
+            if(amounts[:porciones]) then
+                cantidad = amounts[:porciones].scan(/\d+[,.]?d*/).first
+                
+                @@medidas.each_index do |i|
+                    expr = Regexp.new @@medidas[i][0]
+                    if expr.match(amounts[:porciones]) != nil then
+                        multiplier = @@medidas[i][1]
+                    end
+                end
+                @measures << (multiplier * cantidad.to_f)
+            elsif(amounts[:gramos]) then
+                cantidad = amounts[:gramos]
+                @measures << cantidad
+            end
+        end
+    end
+    
 end
