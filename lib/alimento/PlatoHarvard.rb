@@ -73,4 +73,21 @@ class PlatoHarvard
     alias_method :cereales, :ingredient
     alias_method :proteina, :ingredient
     alias_method :aceite, :ingredient
+    
+    def to_s
+        texto = String.new(@name)
+        texto << "\n#{'=' * @name.size}\n"
+        texto << "Composicion nutricional:\n"
+        texto << "#{" " * 51} %-10s %-10s %-10s%-10s\n" % ["proteínas", "glúcidos",  "lípidos", "kcal"]
+        total = 0
+        @ingredients.each_with_index do |i , p|
+            texto << i.to_s
+            total += i.kcal * @measures[p]
+            texto << "%-6.2f" % [i.kcal * @measures[p] ]
+            texto << "\n"
+        end
+        texto << "#{'=' * @name.size}\n"
+        texto << "Valor energético total#{(" " * 62)}#{total}"
+        return texto
+    end
 end
