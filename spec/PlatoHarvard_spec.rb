@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.describe PlatoHarvard do
   before :all do
-      @lentejas = PlatoHarvard.new("Lentejas con arroz, salsa de tomate, huevo y pl´atano a la plancha") do
+      @lentejas = PlatoHarvard.new("Lentejas con arroz, salsa de tomate, huevo y plátano a la plancha") do
         vegetal "tomate",
             :porciones => "2 piezas pequeñas"
         fruta "plátano",
@@ -27,13 +27,16 @@ RSpec.describe PlatoHarvard do
   
   context "Has..." do
     it "#name" do
-        expect(@plato).to have_attributes(:name => "Plato de Ejemplo");
+        expect(@plato).to have_attributes(:name => "Plato de Ejemplo")
     end
     it "#ingredients" do
-        expect(@plato).to have_attributes(:ingredients => []);
+        expect(@plato).to have_attributes(:ingredients => [])
     end
     it "#measures" do
-        expect(@plato).to have_attributes(:measures => []);
+        expect(@plato).to have_attributes(:measures => [])
+    end
+    it "#to_s" do
+        expect(@lentejas).to respond_to(:to_s)
     end
   end
 end

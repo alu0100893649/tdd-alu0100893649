@@ -2,7 +2,7 @@ class PlatoHarvard
     attr_reader :name, :ingredients, :measures
     
     @@alimentos = {
-          "huevo" => AlimentoCategorizable.new("Huevo frito", "Huevos, lácteos y helados", 14.1, 0.0, 19.5),
+          "huevo" => AlimentoCategorizable.new("Huevo", "Huevos, lácteos y helados", 14.1, 0.0, 19.5),
           "leche" => AlimentoCategorizable.new("Leche de vaca", "Huevos, lácteos y helados", 3.3, 4.8, 3.2),
           "yogurt" => AlimentoCategorizable.new("Yogurt", "Huevos, lácteos y helados", 3.8, 4.9, 3.8),
           "cerdo" => AlimentoCategorizable.new("Cerdo", "Carnes y derivados", 21.5, 0.0, 6.3),
@@ -26,13 +26,13 @@ class PlatoHarvard
           "pera" => AlimentoCategorizable.new("Pera", "Fruta", 0.5 ,12.7, 0.3)
         }
         
-    @@medidas = [["/piezas? pequeña/",   2],
-                ["/pieza/"          ,   4],
-                ["/taza/"           , 1.5],
-                ["/cuchara/"        , 0.4],
-                ["/cuchar[o|ó]n/"   , 0.8],
-                ["/vaso/"           , 2],
-                ["/pizca/"          , 0.1]]
+    @@medidas = [[/piezas? pequeña/,   2],
+                [/pieza/          ,   4],
+                [/taza/           , 1.5],
+                [/cuchara/        , 0.4],
+                [/cuchar[o|ó]n/   , 0.8],
+                [/vaso/           , 2],
+                [/pizca/          , 0.1]]
     
     def initialize(name, &block)
         @name = name
@@ -53,11 +53,10 @@ class PlatoHarvard
             @ingredients << @@alimentos[name]
             multiplier = 0
             if(amounts[:porciones]) then
-                cantidad = amounts[:porciones].scan(/\d+[,.]?d*/).first
+                cantidad = amounts[:porciones].scan(/\d+[,.]?\d*/).first
                 
                 @@medidas.each_index do |i|
-                    expr = Regexp.new @@medidas[i][0]
-                    if expr.match(amounts[:porciones]) != nil then
+                    if amounts[:porciones].scan(@@medidas[i][0]).first != nil then
                         multiplier = @@medidas[i][1]
                     end
                 end
@@ -74,6 +73,4 @@ class PlatoHarvard
     alias_method :cereales, :ingredient
     alias_method :proteina, :ingredient
     alias_method :aceite, :ingredient
-    
-    
 end
