@@ -4,19 +4,19 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "alimento/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "Alimento"
+  spec.name          = "ALU0100893649_ALIMENTO"
   spec.version       = Alimento::VERSION
   spec.authors       = ["Sebastian Diaz"]
   spec.email         = ["alu0100893649@ull.edu.es"]
 
   spec.summary       = %q{"Clase para gestionar los glúcidos, lípidos y proteínas de un alimento específico"}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/alu0100893649/tdd-alu0100893649"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = 'http://mygemserver.com'
+    spec.metadata["allowed_push_host"] = 'https://rubygem.org'
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
