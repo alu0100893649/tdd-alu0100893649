@@ -28,7 +28,7 @@ class PlatoHarvard
           "pera" => AlimentoCategorizable.new("Pera", "Fruta", 0.5 ,12.7, 0.3)
         }
         
-        @@proportions = [["/piezas? pequeña/",   2],
+        @@medidas = [["/piezas? pequeña/",   2],
                         ["/pieza/"          ,   4],
                         ["/taza/"           , 0.6],
                         ["/cuchara/"        , 0.4],
