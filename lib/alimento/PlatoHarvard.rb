@@ -1,9 +1,7 @@
 class PlatoHarvard
-    attr_reader :name
-
-    def initialize(name)
-        @name = name
-        @@alimentos = {
+    attr_reader :name, :ingredients
+    
+    @@alimentos = {
           "huevo" => AlimentoCategorizable.new("Huevo frito", "Huevos, lácteos y helados", 14.1, 0.0, 19.5),
           "leche" => AlimentoCategorizable.new("Leche de vaca", "Huevos, lácteos y helados", 3.3, 4.8, 3.2),
           "yogurt" => AlimentoCategorizable.new("Yogurt", "Huevos, lácteos y helados", 3.8, 4.9, 3.8),
@@ -28,13 +26,17 @@ class PlatoHarvard
           "pera" => AlimentoCategorizable.new("Pera", "Fruta", 0.5 ,12.7, 0.3)
         }
         
-        @@medidas = [["/piezas? pequeña/",   2],
-                    ["/pieza/"          ,   4],
-                    ["/taza/"           , 0.6],
-                    ["/cuchara/"        , 0.4],
-                    ["/cuchar[o|ó]n/"   , 0.8],
-                    ["/vaso/"           , 1.2],
-                    ["/gramo[s]?/"      ,   1],
-                    ["/pizca/"          , 0.5]]
+    @@medidas = [["/piezas? pequeña/",   2],
+                ["/pieza/"          ,   4],
+                ["/taza/"           , 0.6],
+                ["/cuchara/"        , 0.4],
+                ["/cuchar[o|ó]n/"   , 0.8],
+                ["/vaso/"           , 1.2],
+                ["/gramo[s]?/"      ,   1],
+                ["/pizca/"          , 0.5]]
+    
+    def initialize(name)
+        @name = name
+        @ingredients = []
     end
 end

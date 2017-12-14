@@ -16,5 +16,8 @@ RSpec.describe PlatoHarvard do
     it "#ingredients" do
         expect(@plato).to have_attributes(:ingredients => []);
     end
+    it "#measures" do
+        expect(@plato).to have_attributes(:measures => []);
+    end
   end
 end
