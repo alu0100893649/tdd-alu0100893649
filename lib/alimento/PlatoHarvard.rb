@@ -1,5 +1,5 @@
 class PlatoHarvard
-    attr_reader :name, :ingredients
+    attr_reader :name, :ingredients, :measures
     
     @@alimentos = {
           "huevo" => AlimentoCategorizable.new("Huevo frito", "Huevos, lácteos y helados", 14.1, 0.0, 19.5),
@@ -38,5 +38,6 @@ class PlatoHarvard
     def initialize(name)
         @name = name
         @ingredients = []
+        @measures = []
     end
 end
